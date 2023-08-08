@@ -48,12 +48,10 @@ describe("Ballot", () => {
     }
     )
   });
-});
     it("sets the voting weight for the chairperson as 1", async () => {
       const chairperson = await ballotContract.voters(owner.address);
       expect(chairperson.weight).to.eq(1);
     });
-  });
 
   describe("when the chairperson interacts with the giveRightToVote function in the contract", async () => {
     beforeEach(async function () {
@@ -80,6 +78,4 @@ describe("Ballot", () => {
 
     });
   });
-
-
 });
