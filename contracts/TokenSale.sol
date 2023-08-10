@@ -22,20 +22,12 @@ contract TokenSale {
     }
 
     function returnTokens(uint256 amount) external {
-        paymentToken.burnFrom(msg.sender, amount);
+        // paymentToken.burnFrom(msg.sender, amount);
         payable(msg.sender).transfer(amount / ratio);
     }
 
-    function mintNft(uint256 nftId) external {
-        paymentToken.transferFrom(msg.sender, address(this), price);
-        // TODO: mint nft of id nftId
-
-contract TokenSale {
-    uint256 public ratio;
-    address public paymentToken;
-
-    constructor(uint256 _ratio, address _paymentToken) {
-        ratio = _ratio;
-        paymentToken =_paymentToken;
-    }
+    // function mintNft(uint256 nftId) external {
+    //     paymentToken.transferFrom(msg.sender, address(this), price);
+    //     // TODO: mint nft of id nftId
+    // }
 }
