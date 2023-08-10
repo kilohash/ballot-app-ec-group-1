@@ -478,6 +478,8 @@
     "/Users/yevhen/Repo/Solidity Bootcamp Q3 2023/ballot-app-ec-group-1/contracts/TokenSale.sol": {
       "lastModificationDate": 1691607235782,
       "contentHash": "af6d7a0bbe47637b7aaf27d272230dad",
+      "lastModificationDate": 1691520697380,
+      "contentHash": "61a7a8548f7afb24c688dbd0d4f24c50",
       "sourceName": "contracts/TokenSale.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -504,7 +506,7 @@
       },
       "imports": [
         "./MyERC20.sol",
-        "./MyERC721.sol"
+        "./MyERC721.sol",
       ],
       "versionPragmas": [
         "^0.8.18"

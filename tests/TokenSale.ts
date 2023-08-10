@@ -1,6 +1,7 @@
 import { expect } from "chai";
 import { ethers } from "hardhat";
 import { MyERC721Token, MyERC20Token, TokenSale, ERC20 } from "../typechain-types";
+import { ERC20, MyERC20Token, TokenSale } from "../typechain-types";
 import { loadFixture } from "@nomicfoundation/hardhat-toolbox/network-helpers";
 import { HardhatEthersSigner } from "@nomicfoundation/hardhat-ethers/signers";
 import { Typed, AddressLike } from "ethers";
@@ -21,7 +22,7 @@ describe("NFT Shop", async () => {
         const nftContract_ = await nftContractFactory.deploy();
         await nftContract_.waitForDeployment();
         const nftContractAddress = await nftContract_.getAddress();
-
+      
         // Deploying an ERC20 Token contract
         const myTokenContractFactory = await ethers.getContractFactory("MyERC20Token");
         const myTokenContract_ = await myTokenContractFactory.deploy();
@@ -33,7 +34,7 @@ describe("NFT Shop", async () => {
         const tokenSaleContract_ = await tokenSaleContractFactory.deploy(RATIO, myTokenContractAddress, nftContractAddress);
         await tokenSaleContract_.waitForDeployment();
 
-        return { tokenSaleContract_, myTokenContract_, nftContract_ }
+        return { tokenSaleContract_, myTokenContract_, nftContract_ }    
     }
 
   beforeEach(async () => {

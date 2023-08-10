@@ -29,5 +29,13 @@ contract TokenSale {
     function mintNft(uint256 nftId) external {
         paymentToken.transferFrom(msg.sender, address(this), price);
         // TODO: mint nft of id nftId
+
+contract TokenSale {
+    uint256 public ratio;
+    address public paymentToken;
+
+    constructor(uint256 _ratio, address _paymentToken) {
+        ratio = _ratio;
+        paymentToken =_paymentToken;
     }
 }
