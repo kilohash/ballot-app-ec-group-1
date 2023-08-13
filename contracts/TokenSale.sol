@@ -22,7 +22,7 @@ contract TokenSale {
     }
 
     function returnTokens(uint256 amount) external {
-        // paymentToken.burnFrom(msg.sender, amount);
+        paymentToken.burnFrom(msg.sender, amount);
         payable(msg.sender).transfer(amount / ratio);
     }
 
