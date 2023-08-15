@@ -12,3 +12,4 @@ typechain-types/*
 
 .env
 cache/solidity-files-cache.json
+lesson13-web3-dapp/.DS_Store
