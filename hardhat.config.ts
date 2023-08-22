@@ -8,6 +8,18 @@ const config: HardhatUserConfig = {
   paths: { tests: "tests" },
 };
 
+module.exports = {
+  solidity: {
+    version: "0.8.19",
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 1000,
+      },
+    },
+  },
+};
+
 task("accounts", "Prints the list of accounts", async (taskArgs: any, hre: { ethers: { getSigners: () => any; }; }) => {
   const accounts = await hre.ethers.getSigners();
 
