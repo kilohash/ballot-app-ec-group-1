@@ -33,3 +33,4 @@ getTotalSupply(): Promise<bigint> {
 mintTokens(address: string): any {
   return {success: true, txHash: '...'};
 }
+}
